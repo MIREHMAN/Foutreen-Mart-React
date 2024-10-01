@@ -1,4 +1,4 @@
-function Policies() {
+function About() {
     return (
       <div >
        
@@ -7,4 +7,4 @@ function Policies() {
     );
   }
   
-  export default Policies;
+  export default About;
