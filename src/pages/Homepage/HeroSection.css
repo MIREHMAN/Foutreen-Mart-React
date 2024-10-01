@@ -1,0 +1,38 @@
+.left-hero,.right-hero{
+    
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    color: #ff9c00;
+    
+}
+.list-group {
+    height: 400px; /* Adjust the height to show 4 items */
+    overflow-y: hidden;
+    position: relative;
+  }
+  
+  .animate-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: scroll 10s linear infinite;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  .list-group-item {
+    margin-bottom: 20px;
+  }
+  
+  .list-group-item:last-child {
+    margin-bottom: 0;
+  }

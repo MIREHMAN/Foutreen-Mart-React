@@ -1,0 +1,30 @@
+.category-box {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .icon-box {
+    border: 1px solid #ddd;
+    border-radius: 10%;
+    
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .icon-box:hover {
+    border-color: #aaa;
+    cursor: pointer;
+  }
+  
+  .category-box span {
+    font-size: 16px;
+    color: #666;
+    display: block;
+    margin-top: 10px;
+  }
+  
