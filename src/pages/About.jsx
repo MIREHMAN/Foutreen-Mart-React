@@ -2,7 +2,7 @@ function About() {
     return (
       <div >
        
-        This is Policies Page
+        This is About Policies and Contact Page
       </div>
     );
   }

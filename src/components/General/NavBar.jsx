@@ -15,6 +15,14 @@ function NavBar() {
             <Nav.Link href="#about">About</Nav.Link>
             
           </Nav>
+          
+          <Nav className="ms-auto">
+          <Nav.Link href="#cart">
+            <i class="bi bi-cart3"></i>
+            </Nav.Link>
+            <Nav.Link href="#wishlist">
+            <i class="bi bi-heart"></i>
+            </Nav.Link>
           <Form className="d-flex">
             <InputGroup>
               <Form.Control
@@ -27,15 +35,17 @@ function NavBar() {
               </Button>
             </InputGroup>
           </Form>
-          <Nav className="ms-auto">
-            <Nav.Link href="#login">
-            <i class="bi bi-person"></i> Login/Sign Up
+            
+          
+          </Nav>
+          <Nav className='mr-auto'>
+          <Nav.Link>
+            <Button><i class="bi bi-person"></i> Login</Button>
+            
             </Nav.Link>
-            <Nav.Link href="#cart">
-            <i class="bi bi-cart3"></i>
-            </Nav.Link>
-            <Nav.Link href="#wishlist">
-            <i class="bi bi-heart"></i>
+            <Nav.Link>
+            <Button variant='success'><i class="bi bi-person"></i> Register</Button>
+            
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

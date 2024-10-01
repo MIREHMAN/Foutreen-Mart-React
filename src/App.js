@@ -5,7 +5,7 @@ import NavBar from './components/General/NavBar';
 import Homepage from './pages/Homepage';
 import Products from './pages/Products';
 import Stores from './pages/Stores';
-import Policies from './pages/Policies';
+import Policies from './pages/About';
 
 
 
@@ -15,7 +15,6 @@ function App() {
       
       <NavBar/>
       <Homepage/>
-    
       <Footer/>
       
     </div>
