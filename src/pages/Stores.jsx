@@ -1,19 +1,52 @@
-import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
+import * as React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import StoreCard from "./Stores/StoreCard";
+import Typography from '@mui/material/Typography';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
 
 function Stores() {
-    return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container maxWidth="sm">
-        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
-        This is Container
-      </Container>
-    </React.Fragment>
-
-    );
+  function handleClick(event) {
+    event.preventDefault();
+    console.info("You clicked a breadcrumb.");
   }
-  
-  export default Stores;
+  return (
+    <Container fluid>
+      <Row className="mx-4 my-4">
+        <div role="presentation" onClick={handleClick}>
+          <Breadcrumbs aria-label="breadcrumb">
+            <Link underline="hover" color="inherit" href="/">
+              Stores
+            </Link>
+            <Link
+              underline="hover"
+              color="inherit"
+              href="/material-ui/getting-started/installation/"
+            >
+              StorePage
+            </Link>
+            <Typography sx={{ color: "text.primary" }}>Products</Typography>
+          </Breadcrumbs>
+        </div>
+      </Row>
+      <Row className="my-4">
+        <Col sm={3}>
+          <StoreCard />
+        </Col>
+        <Col sm={3}>
+          <StoreCard />
+        </Col>
+        <Col sm={3}>
+          <StoreCard />
+        </Col>
+        <Col sm={3}>
+          <StoreCard />
+        </Col>
+      </Row>
+    </Container>
+  );
+}
+
+export default Stores;
