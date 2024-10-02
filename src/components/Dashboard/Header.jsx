@@ -21,13 +21,13 @@ import SellIcon from "@mui/icons-material/Sell";
 
 function Header() {
   return (
-      <Container fluid>
+      
                 <Navbar expand="lg" style={{ padding: "15 px" ,background:"#ffffff"}}>
                   <Container>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                       <Nav className="me-auto">
-                        <h4> Hello Evano !</h4>
+                        <h4> Hello Yasir !</h4>
 
                       </Nav>
                       
@@ -63,7 +63,7 @@ function Header() {
 
                       <Nav className="ms-auto">
                         <Nav.Link href="#useracc">
-                        <Avatar sx={{ bgcolor: deepOrange[500] }}>N</Avatar>
+                        <Avatar sx={{ bgcolor: deepOrange[500] }}>Y</Avatar>
                         
                         </Nav.Link>
                         
@@ -74,7 +74,7 @@ function Header() {
               
             
           
-      </Container>
+      
 
   );
 }
