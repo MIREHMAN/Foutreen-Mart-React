@@ -79,7 +79,7 @@ function AdminDashboardContent() {
     <Container>
       <Row className="my-3">
       {dashboardCardData.map((data) => (
-        <Col xs={3} key={data.id}>
+        <Col  sm={3} key={data.id}>
           <DataCard 
             title={data.title} 
             value={data.value} 
@@ -92,7 +92,7 @@ function AdminDashboardContent() {
     </Row>
 
       <Row className="my-3">
-        <Col xs={8}>
+        <Col sm={8}>
         <SalesChartDataCard salesData={salesData}/>
         </Col>
         <Col xs={4}>
