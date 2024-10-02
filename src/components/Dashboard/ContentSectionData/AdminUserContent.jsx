@@ -5,6 +5,7 @@ import {
     Col,
   } from "react-bootstrap";
   import DataCard from './DataCard';
+import AdminUserDataTable from './AdminUserDataTable';
 
 function AdminUserContent() {
   const usersCardData = [
@@ -64,10 +65,6 @@ function AdminUserContent() {
           </Col>
            
           </Row>
-
-         
-          
-        
           </Container>
   )
 }

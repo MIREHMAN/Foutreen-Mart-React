@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import DataCard from "./DataCard";
 import TableDataCard from "./TableDataCard";
+import SalesChartDataCard from "./SalesChartDataCard";
+import SalesPieChartDataCard from "./SalesPieChartDataCard";
 
 
 function AdminDashboardContent() {
@@ -41,8 +43,43 @@ function AdminDashboardContent() {
         },
       ];
 
-  
-  
+      const salesData = [
+        {
+          month: 'Jan',
+          sales: 100,
+        },
+        {
+          month: 'Feb',
+          sales: 120,
+        },
+        {
+          month: 'Mar',
+          sales: 150,
+        },
+        {
+            month: 'Apr',
+            sales: 80,
+          },
+          {
+            month: 'May',
+            sales: 50,
+          },
+          {
+            month: 'June',
+            sales: 130,
+          },
+      ];
+      
+      const salesDataGenderBased = [
+        {
+          gender: 'Male',
+          sales: 100,
+        },
+        {
+          gender: 'Female',
+          sales: 120,
+        },
+      ];
   
   
   
@@ -65,10 +102,14 @@ function AdminDashboardContent() {
 
       <Row className="my-3">
         <Col xs={8}>
-        <DataCard />
+        <SalesChartDataCard salesData={salesData}/>
         </Col>
         <Col xs={4}>
-          <DataCard />
+          <DataCard title= "Top Selling Perfume" 
+            value= "200"
+            percentage="5"
+            
+        />
         </Col>
       </Row>
 
