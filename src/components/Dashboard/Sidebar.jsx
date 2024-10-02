@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -7,7 +8,6 @@ import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonIcon from '@mui/icons-material/Person';
 import InventoryIcon from '@mui/icons-material/Inventory';
-import SendIcon from '@mui/icons-material/Send';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
@@ -32,7 +32,9 @@ function Sidebar() {
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
+        
         <ListItemText primary="Dashboard" />
+        
       </ListItemButton>
       <ListItemButton>
         <ListItemIcon>

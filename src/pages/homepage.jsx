@@ -17,8 +17,6 @@ function Homepage() {
     <div bg="light" className='main '>
      
       <HeroSection/>
-      <Dashboard/>
-      
       <FlashSalesSection/>
       <CategoriesSection/>
       <ForYouSection/>
