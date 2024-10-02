@@ -70,16 +70,7 @@ function AdminDashboardContent() {
           },
       ];
       
-      const salesDataGenderBased = [
-        {
-          gender: 'Male',
-          sales: 100,
-        },
-        {
-          gender: 'Female',
-          sales: 120,
-        },
-      ];
+    
   
   
   
@@ -105,11 +96,7 @@ function AdminDashboardContent() {
         <SalesChartDataCard salesData={salesData}/>
         </Col>
         <Col xs={4}>
-          <DataCard title= "Top Selling Perfume" 
-            value= "200"
-            percentage="5"
-            
-        />
+          <SalesPieChartDataCard/>
         </Col>
       </Row>
 
