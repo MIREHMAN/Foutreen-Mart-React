@@ -3,25 +3,25 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import insight_img from './increase_img.png'
 
-
-export default function DataCard() {
+export default function DataCard(props) {
   return (
     <Card sx={{ minWidth: 175 }}>
       <CardContent>
         <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14 }}>
-          Total Users
+          {props.title}
         </Typography>
+        <Typography variant="h5" component="div">
+          {props.value}
+        </Typography>
+        <Typography sx={{ color: 'text.secondary', mb: 1 }}>{props.percentage} % increase</Typography>
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="top-product"
+          image={insight_img}
+          alt="insights image"
         />
-        <Typography variant="h5" component="div">
-          14
-        </Typography>
-        <Typography sx={{ color: 'text.secondary', mb: 1 }}>5% increase</Typography>
       </CardContent>
       
     </Card>

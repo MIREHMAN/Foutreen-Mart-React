@@ -7,22 +7,56 @@ import {
   import DataCard from './DataCard';
 
 function AdminSellerContent() {
+  const sellersCardData = [
+    {
+      id: 1,
+      title: "Total Sellers",
+      value: 100,
+      image: "/assets/images/decrease_img.png",
+      percentage: 5,
+      
+    },
+    {
+      id: 2,
+      title: "Active Sellers",
+      value: 1000,
+      image: "/assets/images/decrease_img.png",
+      percentage: 7,
+      
+    },
+    {
+      id: 3,
+      title: "New Sellers",
+      value: 500,
+      image: "/assets/images/stable_img.png",
+      percentage: 0,
+      
+    },
+    {
+      id: 4,
+      title: "Blocked Sellers",
+      value: 250,
+      image: "/assets/images/increase_img.png",
+      percentage: 10,
+      
+    },
+  ];
+
   return (
     <Container>
-    <Row className='my-3'>
-          <Col xs={3}>
-          <DataCard/>
-          </Col>
-          <Col xs={3}>
-          <DataCard/>
-          </Col>
-          <Col xs={3}>
-          <DataCard/>
-          </Col>
-          <Col xs={3}>
-          <DataCard/>
-          </Col>
-          </Row>
+    <Row className="my-3">
+      {sellersCardData.map((data) => (
+        <Col xs={3} key={data.id}>
+          <DataCard 
+            title={data.title} 
+            value={data.value} 
+            percentage={data.percentage} 
+            
+            description={data.description}
+          />
+        </Col>
+      ))}
+    </Row>
 
           <Row className='my-3'>
           <Col xs={12}>
