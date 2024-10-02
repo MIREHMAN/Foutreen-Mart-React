@@ -6,7 +6,7 @@ import {
   } from "react-bootstrap";
   import DataCard from './DataCard';
 
-function AdminUserContent() {
+function AdminSellerContent() {
   return (
     <Container>
     <Row className='my-3'>
@@ -38,4 +38,4 @@ function AdminUserContent() {
   )
 }
 
-export default AdminUserContent
+export default AdminSellerContent
