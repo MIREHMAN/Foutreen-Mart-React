@@ -10,6 +10,7 @@ import Dashboard from "./pages/CMS Panels/Dashboard";
 import AdminDashboardContent from "./components/Dashboard/ContentSectionData/AdminDashboardContent";
 import AdminUserContent from "./components/Dashboard/ContentSectionData/AdminUserContent";
 import AdminSellerContent from "./components/Dashboard/ContentSectionData/AdminSellerContent";
+import LoginForm from "./components/General/LoginForm";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/stores" element={<Stores />} />
         <Route path="/about" element={<About />} />
+        <Route path="/login" element={<LoginForm/>} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route
             path="/admin_dashboard_content"
