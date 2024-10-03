@@ -11,13 +11,11 @@ import AppTheme from './theme/shared-theme/AppTheme';
 import {
   chartsCustomizations,
   
-  treeViewCustomizations,
 } from './theme/customizations';
 import DashboardContent from './DashboardComponents/DashboardContent';
 
 const xThemeComponents = {
   ...chartsCustomizations,
-  ...treeViewCustomizations,
 };
 
 export default function AdminDashboard(props) {

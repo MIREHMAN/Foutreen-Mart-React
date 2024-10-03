@@ -32,7 +32,7 @@ function TableDataCard () {
       ]
     return (
     <TableContainer component={Paper}>
-      <Table aria-label="orders table">
+      <Table aria-label="orders table" >
         <TableHead>
           <TableRow>
             <TableCell>Order ID</TableCell>
@@ -53,13 +53,13 @@ function TableDataCard () {
               <TableCell>{order.status}</TableCell>
               <TableCell>
                 <Button aria-label="view">
-                  <VisibilityIcon />
+                  <VisibilityIcon color="primary"/>
                 </Button>
                 <Button aria-label="edit">
-                  <EditIcon />
+                  <EditIcon color="success"/>
                 </Button>
-                <Button aria-label="delete">
-                  <DeleteIcon />
+                <Button aria-label="delete" >
+                  <DeleteIcon color="error" />
                 </Button>
               </TableCell>
             </TableRow>
