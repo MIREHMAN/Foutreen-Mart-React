@@ -4,6 +4,8 @@ import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 import NavbarBreadcrumbs from './NavbarBreadcrumbs';
 import MenuButton from './MenuButton';
 import ColorModeIconDropdown from '../theme/shared-theme/ColorModeIconDropdown';
+import SellIcon from "@mui/icons-material/Sell";
+import MailIcon from "@mui/icons-material/Mail";
 
 import Search from './Search';
 
@@ -26,8 +28,16 @@ export default function Header() {
         <Search />
         
         <MenuButton showBadge aria-label="Open notifications">
+          <SellIcon />
+        </MenuButton>
+        <MenuButton showBadge aria-label="Open notifications">
+          <MailIcon />
+        </MenuButton>
+        <MenuButton showBadge aria-label="Open notifications">
           <NotificationsRoundedIcon />
         </MenuButton>
+        
+
         <ColorModeIconDropdown />
       </Stack>
     </Stack>

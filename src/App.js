@@ -15,7 +15,7 @@ import LoginForm from "./components/General/LoginForm";
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      
       
       <BrowserRouter>
         <Routes>
