@@ -6,7 +6,7 @@ import Homepage from "./pages/Homepage";
 import Products from "./pages/Products";
 import Stores from "./pages/Stores";
 import About from "./pages/About";
-import Dashboard from "./pages/CMS Panels/Dashboard";
+import AdminDashboard from "./pages/Admin Dashboard/AdminDashboard";
 import AdminDashboardContent from "./components/Dashboard/ContentSectionData/AdminDashboardContent";
 import AdminUserContent from "./components/Dashboard/ContentSectionData/AdminUserContent";
 import AdminSellerContent from "./components/Dashboard/ContentSectionData/AdminSellerContent";
@@ -24,7 +24,7 @@ function App() {
         <Route path="/stores" element={<Stores />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<LoginForm/>} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<AdminDashboard/> } />
           <Route
             path="/admin_dashboard_content"
             element={<AdminDashboardContent />}
