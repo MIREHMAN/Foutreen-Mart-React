@@ -2,9 +2,9 @@ import * as React from 'react';
 import Grid from '@mui/material/Grid2';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import PageViewsBarChart from './PageViewsBarChart';
-import SessionsChart from './SessionsChart';
 import StatCard from './StatCard';
+import UsersDataTable from './UsersDataTable';
+
 
 const data = [
   {
@@ -18,7 +18,7 @@ const data = [
     ],
   },
   {
-    title: 'Total Sellers',
+    title: 'Active Users',
     value: '325',
     interval: 'Last 30 days',
     trend: 'down',
@@ -28,7 +28,7 @@ const data = [
     ],
   },
   {
-    title: 'Total Products',
+    title: 'New Users',
     value: '123',
     interval: 'Last 30 days',
     trend: 'neutral',
@@ -38,7 +38,7 @@ const data = [
     ],
   },
   {
-    title: 'Total Orders',
+    title: 'Blocked Users',
     value: '200',
     interval: 'Last 30 days',
     trend: 'neutral',
@@ -49,7 +49,7 @@ const data = [
   },
 ];
 
-export default function MainGrid() {
+export default function AdminUsersGrid() {
   return (
     <Box sx={{ width: '100%', maxWidth: { sm: '100%', md: '1700px' } }}>
       {/* cards */}
@@ -68,12 +68,10 @@ export default function MainGrid() {
           </Grid>
         ))}
         
-        <Grid size={{ sm: 12, md: 6 }}>
-          <SessionsChart />
-        </Grid>
-        <Grid size={{ sm: 12, md: 6 }}>
-          <PageViewsBarChart />
-        </Grid>
+        <Grid size={{ xs: 12, sm: 6, lg: 12 }}>
+            <UsersDataTable/>
+          </Grid>
+        
       </Grid>
       
       

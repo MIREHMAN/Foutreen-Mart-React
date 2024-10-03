@@ -6,7 +6,6 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import AppNavbar from './DashboardComponents/AppNavbar';
 import Header from './DashboardComponents/Header';
-import MainGrid from './DashboardComponents/MainGrid';
 import SideMenu from './DashboardComponents/SideMenu';
 import AppTheme from './theme/shared-theme/AppTheme';
 import {
@@ -14,6 +13,7 @@ import {
   
   treeViewCustomizations,
 } from './theme/customizations';
+import DashboardContent from './DashboardComponents/DashboardContent';
 
 const xThemeComponents = {
   ...chartsCustomizations,
@@ -48,7 +48,7 @@ export default function AdminDashboard(props) {
             }}
           >
             <Header />
-            <MainGrid />
+            <DashboardContent/>
           </Stack>
         </Box>
       </Box>
