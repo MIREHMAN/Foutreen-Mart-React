@@ -7,7 +7,6 @@ import FlashSalesSection from './Homepage/FlashSalesSection';
 
 import CategoriesSection from './Homepage/CategoriesSection';
 import ForYouSection from './Homepage/ForYouSection';
-import Dashboard from './CMS Panels/Dashboard';
 
 
 

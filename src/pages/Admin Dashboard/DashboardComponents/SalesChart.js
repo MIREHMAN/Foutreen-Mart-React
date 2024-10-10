@@ -104,12 +104,7 @@ export default function SessionsChart() {
           margin={{ left: 50, right: 20, top: 20, bottom: 20 }}
           grid={{ horizontal: true }}
           sx={{
-            '& .MuiAreaElement-series-organic': {
-              fill: "url('#organic')",
-            },
-            '& .MuiAreaElement-series-referral': {
-              fill: "url('#referral')",
-            },
+            
             '& .MuiAreaElement-series-direct': {
               fill: "url('#direct')",
             },
@@ -120,8 +115,7 @@ export default function SessionsChart() {
             },
           }}
         >
-          <AreaGradient color={theme.palette.primary.dark} id="organic" />
-          <AreaGradient color={theme.palette.primary.main} id="referral" />
+          
           <AreaGradient color={theme.palette.primary.light} id="direct" />
         </LineChart>
       </CardContent>

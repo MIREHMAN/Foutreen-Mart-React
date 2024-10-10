@@ -1,72 +1,98 @@
-import React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import React from "react";
+import Table from "@material-table/core";
+import TableContainer from "@mui/material/TableContainer";
+import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
 
-function TableDataCard () {
+function TableDataCard() {
+  const data_col = [
+    { field: "id", title: "Id" },
+    { field: "customerName", title: "Customer Name" },
+    {field: "orderDate", title: "Order Date" },
+    { field: "total", title: "Order Amount" },
+    {field: "status", title: "Order Status" },
+    
+  ];
 
-    const orders=[
+  const orders = [
+    {
+      id: 1,
+      customerName: "John Doe",
+      orderDate: "2022-01-01",
+      total: 100.0,
+      status: "Pending",
+      
+       
+    },
+    {
+      id: 2,
+      customerName: "Jane Doe",
+      orderDate: "2022-01-15",
+      total: 200.0,
+      status: "Shipped",
+    },
+    {
+      id: 3,
+      customerName: "Jane Doe",
+      orderDate: "2022-01-15",
+      total: 200.0,
+      status: "Shipped",
+    },
+    {
+      id: 4,
+      customerName: "Jane Doe",
+      orderDate: "2022-01-15",
+      total: 200.0,
+      status: "Shipped",
+    },
+    {
+      id: 5,
+      customerName: "Jane Doe",
+      orderDate: "2022-01-15",
+      total: 200.0,
+      status: "Shipped",
+    },
+    {
+      id: 6,
+      customerName: "Jane Doe",
+      orderDate: "2022-01-15",
+      total: 200.0,
+      status: "Shipped",
+    },
+  ];
+  return (
+    
+      <Table title="All Users" data={orders} columns={data_col} actions={[
         {
-          "id": 1,
-          "customerName": "John Doe",
-          "orderDate": "2022-01-01",
-          "total": 100.00,
-          "status": "Pending"
+          icon: () => <VisibilityIcon />,
+          tooltip: "View Order",
+          onClick: () => {
+          alert(`View User : `);
+          },
         },
         {
-          "id": 2,
-          "customerName": "Jane Doe",
-          "orderDate": "2022-01-15",
-          "total": 200.00,
-          "status": "Shipped"
+          icon: () => <EditIcon />,
+          tooltip: "Edit User",
+          onClick: () => {
+          alert(`Edit User : `);
+          },
         },
+        {
+          icon: () => <DeleteIcon />,
+          tooltip: "Delete User",
+          onClick: () => {
+          alert(`Delete User : `);
+          },
+        },
+      ]}/>
         
-      ]
-    return (
-    <TableContainer component={Paper}>
-      <Table aria-label="orders table" >
-        <TableHead>
-          <TableRow>
-            <TableCell>Order ID</TableCell>
-            <TableCell>Customer Name</TableCell>
-            <TableCell>Order Date</TableCell>
-            <TableCell>Total</TableCell>
-            <TableCell>Status</TableCell>
-            <TableCell>Actions</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {orders.map((order) => (
-            <TableRow key={order.id}>
-              <TableCell>{order.id}</TableCell>
-              <TableCell>{order.customerName}</TableCell>
-              <TableCell>{order.orderDate}</TableCell>
-              <TableCell>${order.total}</TableCell>
-              <TableCell>{order.status}</TableCell>
-              <TableCell>
-                <Button aria-label="view">
-                  <VisibilityIcon color="primary"/>
-                </Button>
-                <Button aria-label="edit">
-                  <EditIcon color="success"/>
-                </Button>
-                <Button aria-label="delete" >
-                  <DeleteIcon color="error" />
-                </Button>
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+            
+          
+      
+    
   );
 }
 
