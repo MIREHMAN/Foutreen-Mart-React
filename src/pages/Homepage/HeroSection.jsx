@@ -1,9 +1,9 @@
 
 
 import { Container, Row, Col, Carousel, Image ,ListGroup, ListGroupItem} from 'react-bootstrap';
-import Banner1 from './cover1.jpg';
-import Banner2 from './cover.jpg';
-import Banner3 from './cover2.jpg';
+import Banner1 from '../../assets/cover.jpg';
+import Banner2 from '../../assets/cover1.jpg';
+import Banner3 from '../../assets/cover2.jpg';
 
 function HeroSection() {
   

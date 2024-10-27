@@ -1,1 +1,0 @@
-export { chartsCustomizations } from './charts';
