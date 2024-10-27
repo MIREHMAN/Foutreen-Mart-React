@@ -105,6 +105,7 @@ function HeroSection() {
   return (
     <Container fluid className="hero-section">
       <Paper sx={{ p: 2 }}>
+      <Grid container spacing={2}>
         <Box
           sx={{
             flexGrow: 1,
@@ -113,15 +114,16 @@ function HeroSection() {
             justifyContent: "center",
           }}
         >
-          <Grid container spacing={2}>
+         
             <Grid item xs={12} md={3}>
               <ProductsList />
             </Grid>
             <Grid item xs={12} md={9}>
               <CustomCarousel/>
             </Grid>
-          </Grid>
+          
         </Box>
+        </Grid>
       </Paper>
     </Container>
   );
