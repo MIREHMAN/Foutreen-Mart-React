@@ -75,7 +75,7 @@ function HeroSection() {
     );
   };
 
-  const Carousal = () => {
+  const CustomCarousel = () => {
     return (
       <Carousel className="hero-carousel h-100">
         <Carousel.Item>
@@ -105,28 +105,23 @@ function HeroSection() {
   return (
     <Container fluid className="hero-section">
       <Paper sx={{ p: 2 }}>
-        
-          <Box
-            sx={{
-              flexGrow: 1,
-              xs: { display: "flex",flexDirection:'column-reverse' },
-              md: { display: "flex" },
-            }}
-          >
-            <Grid container spacing={2}>
-            <Box>
-              <Grid size={{ xs: 12, md: 3 }}>
-                <ProductsList />
-              </Grid>
-            </Box>
-            <Box>
-              <Grid size={{ xs: 12, md: 9 }}>
-                <Carousal />
-              </Grid>
-            </Box>
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: "flex",
+            flexDirection: { xs: "column-reverse", md: "row" },
+            justifyContent: "center",
+          }}
+        >
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={3}>
+              <ProductsList />
             </Grid>
-          </Box>
-        
+            <Grid item xs={12} md={9}>
+              <CustomCarousel/>
+            </Grid>
+          </Grid>
+        </Box>
       </Paper>
     </Container>
   );
