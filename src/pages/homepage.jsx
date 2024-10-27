@@ -1,13 +1,9 @@
 import React from 'react';
 import './homepage.css';
-
-
 import HeroSection from './Homepage/HeroSection';
 import FlashSalesSection from './Homepage/FlashSalesSection';
-
 import CategoriesSection from './Homepage/CategoriesSection';
 import ForYouSection from './Homepage/ForYouSection';
-
 
 
 
