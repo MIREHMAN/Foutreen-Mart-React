@@ -1,12 +1,10 @@
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import Rating from '@mui/material/Rating';
+import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid2";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 import {
   Container,
   Row,
@@ -19,22 +17,44 @@ import {
 import Banner1 from "../../assets/cover.jpg";
 import Banner2 from "../../assets/cover1.jpg";
 import Banner3 from "../../assets/cover2.jpg";
-import { height } from "@mui/system";
+import { Chip } from "@mui/material";
+import { useState } from "react";
 
-function HeroSection() {
-const CustomCard =()=>{
-  return(
+export default function HeroSection() {
+  const CustomCard = ({ rating, image, title, price, onClick }) => {
+    const [value, setValue] = useState(rating);
   
-  <Paper sx={{display:'flex',m:0,p:0 ,width:300}}>
-    <Box>
-      <Image src="https://picsum.photos/200" style={{height:'100px'}}></Image>
-    </Box>
-    <Box>
-      Text Box
-    </Box>
-  </Paper>
-  )
-}
+    return (
+      <Button onClick={onClick}>
+      <Paper
+        sx={{
+          display: 'flex',
+          m: 0,
+          p: 0,
+          width: 300,
+          justifyContent: 'space-around',
+          alignItems: 'center',
+          height: '100px',
+          cursor: 'pointer'
+        }}
+        
+      > 
+        <Box>
+          <img src={image} style={{ height: '70px' }} alt={title} />
+        </Box>
+        <Box>
+          <Typography variant="h6">{title}</Typography>
+          <Rating name="read-only" value={value} readOnly precision={0.5} />
+          <Stack direction="row" spacing={2}>
+            <Typography sx={{ fontWeight: 800 }}>RS. {price}</Typography>
+            <Chip label="New" color="success" variant="contained" />
+          </Stack>
+        </Box>
+        
+      </Paper>
+      </Button>
+    );
+  };
   const ProductsList = () => {
     const products = [
       {
@@ -124,7 +144,6 @@ const CustomCard =()=>{
   };
   return (
     <Container fluid className="hero-section">
-      
       <Grid container spacing={2}>
         <Box
           sx={{
@@ -134,21 +153,18 @@ const CustomCard =()=>{
             justifyContent: "center",
           }}
         >
-         
+          <Grid item xs={12} md={12}>
+            <CustomCarousel />
+          </Grid>
+          <Paper sx={{ p: 2, mt: 2 }}>
             <Grid item xs={12} md={12}>
-            <CustomCarousel/>
-            
+              <CustomCard />
             </Grid>
-            <Paper sx={{ p: 2, mt:2 }}>
-            <Grid item xs={12} md={12}>
-            <CustomCard/>
-            </Grid>
-            </Paper>
+          </Paper>
         </Box>
-        </Grid>
-     
+      </Grid>
     </Container>
   );
 }
 
-export default HeroSection;
+
