@@ -149,6 +149,7 @@ const handlePrev = () => {
           <Grid item xs={12} md={12}>
             <CustomCarousel />
           </Grid>
+          <Typography variant="h4" sx={{textAlign:'center', mt:2}}>Latest Updates</Typography>
           <Grid item xs={12} md={12}>
     <Grid container spacing={2}>
     {products.length > 0 && (
