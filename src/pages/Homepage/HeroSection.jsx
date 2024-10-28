@@ -1,5 +1,11 @@
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import Grid from "@mui/material/Grid2";
 import {
   Container,
@@ -13,8 +19,22 @@ import {
 import Banner1 from "../../assets/cover.jpg";
 import Banner2 from "../../assets/cover1.jpg";
 import Banner3 from "../../assets/cover2.jpg";
+import { height } from "@mui/system";
 
 function HeroSection() {
+const CustomCard =()=>{
+  return(
+  
+  <Paper sx={{display:'flex',m:0,p:0 ,width:300}}>
+    <Box>
+      <Image src="https://picsum.photos/200" style={{height:'100px'}}></Image>
+    </Box>
+    <Box>
+      Text Box
+    </Box>
+  </Paper>
+  )
+}
   const ProductsList = () => {
     const products = [
       {
@@ -104,27 +124,29 @@ function HeroSection() {
   };
   return (
     <Container fluid className="hero-section">
-      <Paper sx={{ p: 2 }}>
+      
       <Grid container spacing={2}>
         <Box
           sx={{
             flexGrow: 1,
             display: "flex",
-            flexDirection: { xs: "column-reverse", md: "row" },
+            flexDirection: "column",
             justifyContent: "center",
           }}
         >
          
-            <Grid item xs={12} md={3}>
-              <ProductsList />
+            <Grid item xs={12} md={12}>
+            <CustomCarousel/>
+            
             </Grid>
-            <Grid item xs={12} md={9}>
-              <CustomCarousel/>
+            <Paper sx={{ p: 2, mt:2 }}>
+            <Grid item xs={12} md={12}>
+            <CustomCard/>
             </Grid>
-          
+            </Paper>
         </Box>
         </Grid>
-      </Paper>
+     
     </Container>
   );
 }
