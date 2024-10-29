@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card, Pagination, Button } from 'react-bootstrap';
+import ProducatCard from '../../components/ProducatCard';
 
 function FlashSalesSection() {
     const image = 'https://picsum.photos/200';
@@ -16,6 +17,7 @@ function FlashSalesSection() {
                     </div>
                 </Col>
             </Row>
+            <ProducatCard/>
             <Row className='g-4'>
                 <Col xs={3}>
                 <Card>
