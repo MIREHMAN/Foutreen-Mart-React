@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage/Homepage";
 import Products from "./pages/Products/Products";
 import NavBar from "./components/NavBar";
 import MobileMenu from "./components/MobileMenu";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
       <Box sx={{ display: { xs: "block", md: "none", lg: "none" } }}>
       <MobileMenu/>
       </Box>
-
+      <Box sx={{ display: { xs: "block", md: "none", lg: "none" }, backgroundColor:'aqua' , p:1, margin:'auto'}}>
+      <SearchBar/>
+      </Box>
       <Homepage />
       <BrowserRouter>
         <Routes>

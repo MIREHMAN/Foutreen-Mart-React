@@ -27,7 +27,7 @@ function MobileMenu() {
           <Box sx={{ flexGrow: 1, display: { xs: 'flex'} }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="open-menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={toggleDrawer(true)}
