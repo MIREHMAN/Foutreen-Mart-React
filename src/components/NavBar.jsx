@@ -1,57 +1,56 @@
-import React from 'react';
-import { Navbar, Nav, Container, Form, Button, InputGroup } from 'react-bootstrap';
-import Logo from '../General/logo_web.png'
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
+import { Home, Search } from '@mui/icons-material';
+import SearchBar from './SearchBar';
+
+
+const pages = ['Projects', 'Skills', 'Certifications', 'Testimonials', 'About'];
+
 function NavBar() {
   return (
-    <Navbar bg="light" expand="lg" style={{padding:'15 px'}}>
-      <Container >
-        <Navbar.Brand href="/"><img src={Logo} alt={Logo} style={{width:'33%'}}/></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto" >
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#products">Products</Nav.Link>
-            <Nav.Link href="stores">Stores</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            
-          </Nav>
+    <Box sx={{ mt:3, width: '100%'}}>
+    <AppBar position="static" sx={{borderRadius:'6px',backgroundColor:'gray'}}>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
           
-          <Nav className="ms-auto">
-          <Nav.Link href="#cart">
-            <i class="bi bi-cart3"></i>
-            </Nav.Link>
-            <Nav.Link href="#wishlist">
-            <i class="bi bi-heart"></i>
-            </Nav.Link>
-          <Form className="d-flex">
-            <InputGroup>
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">
-              <i class="bi bi-search"></i>
+          <Box
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { md: 'flex' },
+              color:'inherit'
+            }}
+          >
+            <Home/ >
+          </Box>
+
+        
+          <Box sx={{ flexGrow: 1, display: {md: 'flex' } }}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                
+                sx={{ my:1,mx:1, color: 'white', fontWeight:'600',display: 'block' }}
+              >
+                {page}
               </Button>
-            </InputGroup>
-          </Form>
+            ))}
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
             
-          
-          </Nav>
-          <Nav className='mr-auto'>
-          <Nav.Link>
-            <Button><i class="bi bi-person"></i> Login</Button>
-            
-            </Nav.Link>
-            <Nav.Link>
-            <Button variant='success'><i class="bi bi-person"></i> Register</Button>
-            
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+           <SearchBar/>
+           
+          </Box>
+        </Toolbar>
       </Container>
-    </Navbar>
+    </AppBar>
+    </Box>
   );
 }
-
 export default NavBar;
