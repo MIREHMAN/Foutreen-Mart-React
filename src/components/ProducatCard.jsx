@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -11,18 +11,18 @@ import Stack from "@mui/material/Stack";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const ProducatCard = ({title,price,rating,image}) => {
-    const [value,setValue]=useState(4.5)
+    
   return (
     <Card sx={{ maxWidth: 345 , cursor:'pointer' }} >
     <CardMedia
       sx={{ height: 250 }}
-      image="https://picsum.photos/200"
-      title="green iguana"
+      image={image}
+      title={title}
     />
     <CardContent >
     <Stack direction="row" spacing={1}>
               <Typography variant='h6' sx={{ fontWeight: 800, color: "blue" }}>
-                Latest Ladies Trendy Watches
+                {title}
               </Typography>
               <Chip
                 size="small"
@@ -36,9 +36,9 @@ const ProducatCard = ({title,price,rating,image}) => {
       
             <Stack direction="row" spacing={15}>
               <Typography sx={{ fontWeight: 800, color: "secondary" }}>
-                RS. 7640
+                RS. {price}
               </Typography>
-              <Rating name="read-only" value={value} readOnly precision={0.5} />
+              <Rating name="read-only" value={rating} readOnly precision={0.5} />
             </Stack>
      
     </CardContent>
