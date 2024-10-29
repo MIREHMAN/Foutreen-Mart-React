@@ -8,7 +8,7 @@ import { Home, Search } from '@mui/icons-material';
 import SearchBar from './SearchBar';
 
 
-const pages = ['Projects', 'Skills', 'Certifications', 'Testimonials', 'About'];
+const pages = ['Home', 'Shop', 'Stores', 'About'];
 
 function NavBar() {
   return (

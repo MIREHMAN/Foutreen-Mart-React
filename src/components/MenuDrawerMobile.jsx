@@ -15,10 +15,9 @@ import GithubIcon from '@mui/icons-material/GitHub';
 function MenuDrawerMobile({ open, toggleDrawer }) {
   
   const mainListItems = [
-    { text: 'Projects' },
-    { text: 'Skills' },
-    { text: 'Certifications'},
-    { text: 'Testimonials'},
+    { text: 'Home' },
+    { text: 'Shop' },
+    { text: 'Stores'},
     { text: 'About' },
   ];
   
@@ -36,7 +35,7 @@ function MenuDrawerMobile({ open, toggleDrawer }) {
             <ListItem key={index} disablePadding sx={{ display: 'block' }}>
               <ListItemButton selected={index === 0}>
               
-                <ListItemText primary={item.text} sx={{color:'whitesmoke', fontWeight:'800'}} />
+                <ListItemText primary={item.text} sx={{color:'whitesmoke', fontWeight:'800', p:2}} />
               </ListItemButton>
               <Divider />
             </ListItem>
