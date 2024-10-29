@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Pagination, Button } from "react-bootstrap";
 import ProducatCard from "../../components/ProducatCard";
+import WImage from '../../assets/watch1.jpg'
 
 function FlashSalesSection() {
   const [flashProducts, setFlashProducts] = useState([
@@ -9,10 +10,10 @@ function FlashSalesSection() {
       name: "Stylish Ladies Watch",
       price: 899,
       rating: 4.5,
-      image : "https://picsum.photos/200"
+      image : WImage
     },
   ]);
-  const image = "https://picsum.photos/200";
+  
   const title = "Latest Ladies Watch";
   const price = 899;
   const rating = 3.5;
@@ -30,7 +31,7 @@ function FlashSalesSection() {
         title={flashProducts[0].name}
         rating={flashProducts[0].rating}
         price={flashProducts[0].price}
-        image={image}
+        image={flashProducts[0].image}
       />
 
       <Pagination>
