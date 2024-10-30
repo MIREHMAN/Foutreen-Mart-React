@@ -57,15 +57,9 @@ const ProductCard = ({ title, price, rating, image }) => {
             >
               RS. {price}
             </Typography>
-            <Chip
-              size="small"
-              label="New"
-              color="success"
-              variant="contained"
-              sx={{ fontSize: "0.6rem", borderRadius: "16px" }}
-            />
+           
           </Stack>
-          <Rating name="read-only" value={rating} readOnly precision={0.5} />
+          <Rating name="read-only" value={rating} readOnly precision={0.5} sx={{fontSize:'1rem'}}/>
         </Stack>
       </CardContent>
 
@@ -76,12 +70,12 @@ const ProductCard = ({ title, price, rating, image }) => {
           <Button variant="contained" color="success" size="small" sx={{fontSize:'0.5rem'}}>
             Buy Now
           </Button>
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={0.5}>
             <Button variant="contained" color="secondary" size="small" sx={{fontSize:'0.5rem'}}>
               Add to Cart
             </Button>
             <Button variant="contained" color="secondary" size="small" sx={{fontSize:'0.5rem'}}>
-              <FavoriteIcon  sx={{fontSize:'1rem'}}/>
+              <FavoriteIcon  sx={{fontSize:'0.8rem'}}/>
             </Button>
           </Stack>
         </Stack>
