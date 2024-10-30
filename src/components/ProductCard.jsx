@@ -12,9 +12,10 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const ProductCard = ({ title, price, rating, image }) => {
   return (
-    <Card sx={{ width: "100%", height: "100%", cursor: "pointer", py: 2 }}>
+    <Card sx={{ width: {xs:"100%", md:'100%'}, height: "100%", cursor: "pointer", py: {xs:0, md:2} }}>
+      
       <CardMedia
-        sx={{ height: { xs: 150, md: 250 }, width: "100%" }}
+        sx={{ height: { xs: 100, md: 250 }, width: "50%", margin:'auto' }}
         image={image}
         title={title}
       />
@@ -43,7 +44,7 @@ const ProductCard = ({ title, price, rating, image }) => {
         <Stack direction="row" spacing={1}>
           <Typography
             variant="h6"
-            sx={{ fontWeight: 600, color: "blue", fontSize: "medium" }}
+            sx={{ fontWeight: 600, color: "blue", fontSize: "small" }}
           >
             {title}
           </Typography>
@@ -61,7 +62,7 @@ const ProductCard = ({ title, price, rating, image }) => {
               label="New"
               color="success"
               variant="contained"
-              sx={{ fontSize: "0.6rem", borderRadius: "8px" }}
+              sx={{ fontSize: "0.6rem", borderRadius: "16px" }}
             />
           </Stack>
           <Rating name="read-only" value={rating} readOnly precision={0.5} />
@@ -72,15 +73,15 @@ const ProductCard = ({ title, price, rating, image }) => {
 
       <CardActions sx={{ display: { xs: "block", md: "none" } }}>
         <Stack spacing={1}>
-          <Button variant="contained" color="success" size="small">
+          <Button variant="contained" color="success" size="small" sx={{fontSize:'0.5rem'}}>
             Buy Now
           </Button>
           <Stack direction="row" spacing={2}>
-            <Button variant="contained" color="secondary" size="small">
+            <Button variant="contained" color="secondary" size="small" sx={{fontSize:'0.5rem'}}>
               Add to Cart
             </Button>
-            <Button variant="contained" color="secondary" size="small">
-              <FavoriteIcon />
+            <Button variant="contained" color="secondary" size="small" sx={{fontSize:'0.5rem'}}>
+              <FavoriteIcon  sx={{fontSize:'1rem'}}/>
             </Button>
           </Stack>
         </Stack>
