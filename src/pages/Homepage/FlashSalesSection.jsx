@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Pagination } from "react-bootstrap";
 import ProductCard from "../../components/ProductCard";
 import WImage from "../../assets/watch1.jpg";
 import Grid from "@mui/material/Grid2";

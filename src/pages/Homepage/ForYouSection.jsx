@@ -1,214 +1,87 @@
-import React from 'react';
-import { Container, Row, Col, Card, Pagination, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import './CategoriesSection.css'
+import Grid from '@mui/material/Grid2';
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import ProductCard from "../../components/ProductCard";
+import WImage from "../../assets/watch1.jpg";
 
-function ForYouSection() {
-    const image = 'https://picsum.photos/200';
+
+
+
+
+
+
+const ForYouSection = () => {
+   
+    const [Products, setFlashProducts] = useState([
+        {
+          id: 1,
+          name: "Stylish Ladies Watch",
+          price: 899,
+          rating: 4.5,
+          image: WImage,
+        },
+        {
+          id: 2,
+          name: "Stylish Ladies Watch",
+          price: 899,
+          rating: 4.5,
+          image: WImage,
+        },
+        {
+          id: 3,
+          name: "Stylish Ladies Watch",
+          price: 899,
+          rating: 4.5,
+          image: WImage,
+        },
+        {
+          id: 4,
+          name: "Stylish Ladies Watch",
+          price: 899,
+          rating: 4.5,
+          image: WImage,
+        },
+        {
+          id: 5,
+          name: "Stylish Ladies Watch",
+          price: 899,
+          rating: 4.5,
+          image: WImage,
+        },
+      ]);
+
     return (
-        <Container fluid className="mt-5">
-            <Row className='mb-4'>
-
-                <Col xs={12}>
-                    <h1>For You</h1>
-                </Col>
-                
-            </Row>
-            <Row className='g-4'>
-                <Col xs={3}>
-                <Card>
-                        <Card.Img variant="top" src={image} />
-                        <Card.Body>
-                            <Card.Title>Product 8</Card.Title>
-                            <Card.Text className="d-flex justify-content-between">
-                                <span>Price: $80</span>
-                                <span>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                </span>
-                            </Card.Text>
-                            <Button className="me-2">Buy Now</Button>
-                            <Button className="me-2">Add to Cart</Button>
-                            <Button>
-                                <i class="bi bi-heart"></i>
-                            </Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col xs={3}>
-                <Card>
-                        <Card.Img variant="top" src={image} />
-                        <Card.Body>
-                            <Card.Title>Product 8</Card.Title>
-                            <Card.Text className="d-flex justify-content-between">
-                                <span>Price: $80</span>
-                                <span>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                </span>
-                            </Card.Text>
-                            <Button className="me-2">Buy Now</Button>
-                            <Button className="me-2">Add to Cart</Button>
-                            <Button>
-                                <i class="bi bi-heart"></i>
-                            </Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col xs={3}>
-                <Card>
-                        <Card.Img variant="top" src={image} />
-                        <Card.Body>
-                            <Card.Title>Product 8</Card.Title>
-                            <Card.Text className="d-flex justify-content-between">
-                                <span>Price: $80</span>
-                                <span>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                </span>
-                            </Card.Text>
-                            <Button className="me-2">Buy Now</Button>
-                            <Button className="me-2">Add to Cart</Button>
-                            <Button>
-                                <i class="bi bi-heart"></i>
-                            </Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col xs={3}>
-                <Card>
-                        <Card.Img variant="top" src={image} />
-                        <Card.Body>
-                            <Card.Title>Product 8</Card.Title>
-                            <Card.Text className="d-flex justify-content-between">
-                                <span>Price: $80</span>
-                                <span>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                </span>
-                            </Card.Text>
-                            <Button className="me-2">Buy Now</Button>
-                            <Button className="me-2">Add to Cart</Button>
-                            <Button>
-                                <i class="bi bi-heart"></i>
-                            </Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-            <Row className='mb-4'>
-                <Col xs={3}>
-                <Card>
-                        <Card.Img variant="top" src={image} />
-                        <Card.Body>
-                            <Card.Title>Product 8</Card.Title>
-                            <Card.Text className="d-flex justify-content-between">
-                                <span>Price: $80</span>
-                                <span>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                </span>
-                            </Card.Text>
-                            <Button className="me-2">Buy Now</Button>
-                            <Button className="me-2">Add to Cart</Button>
-                            <Button>
-                                <i class="bi bi-heart"></i>
-                            </Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col xs={3}>
-                <Card>
-                        <Card.Img variant="top" src={image} />
-                        <Card.Body>
-                            <Card.Title>Product 8</Card.Title>
-                            <Card.Text className="d-flex justify-content-between">
-                                <span>Price: $80</span>
-                                <span>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                </span>
-                            </Card.Text>
-                            <Button className="me-2">Buy Now</Button>
-                            <Button className="me-2">Add to Cart</Button>
-                            <Button>
-                                <i class="bi bi-heart"></i>
-                            </Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col xs={3}>
-                <Card>
-                        <Card.Img variant="top" src={image} />
-                        <Card.Body>
-                            <Card.Title>Product 8</Card.Title>
-                            <Card.Text className="d-flex justify-content-between">
-                                <span>Price: $80</span>
-                                <span>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                </span>
-                            </Card.Text>
-                            <Button className="me-2">Buy Now</Button>
-                            <Button className="me-2">Add to Cart</Button>
-                            <Button>
-                                <i class="bi bi-heart"></i>
-                            </Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col xs={3}>
-                    <Card>
-                        <Card.Img variant="top" src={image} />
-                        <Card.Body>
-                            <Card.Title>Product 8</Card.Title>
-                            <Card.Text className="d-flex justify-content-between">
-                                <span>Price: $80</span>
-                                <span>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                </span>
-                            </Card.Text>
-                            <Button className="me-2">Buy Now</Button>
-                            <Button className="me-2">Add to Cart</Button>
-                            <Button>
-                                <i class="bi bi-heart"></i>
-                            </Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-            <Pagination>
-                <Pagination.Prev />
-                <Pagination.Item active>1</Pagination.Item>
-                <Pagination.Item>2</Pagination.Item>
-                <Pagination.Item>3</Pagination.Item>
-                <Pagination.Next />
-            </Pagination>
-        </Container>
+        <Grid container sx={{ m: 3 }}>
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
+        <Grid item xs={12}>
+          <Box sx={{ display: "flex" }}>
+            <Typography variant="h4">For You</Typography>
+            
+          </Box>
+        </Grid>
+        <Grid container spacing={2}>
+        {Products.map((product, index) => (
+          <Grid
+            key={product.id}
+            item
+            xs={6}
+            md={3}
+           
+          >
+            <ProductCard
+              title={product.name}
+              rating={product.rating}
+              price={product.price}
+              image={product.image}
+            />
+          </Grid>
+        ))}
+      </Grid>
+      </Box>
+      </Grid>
     );
-}
+};
 
 export default ForYouSection;
