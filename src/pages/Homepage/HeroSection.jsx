@@ -1,26 +1,17 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import Rating from "@mui/material/Rating";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid2";
-import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import CustomProductCard from "../../components/CustomProductCard";
 import {
   Container,
-  Row,
-  Col,
   Carousel,
-  Image,
-  ListGroup,
-  ListGroupItem,
 } from "react-bootstrap";
 import Banner1 from "../../assets/cover.jpg";
 import Banner2 from "../../assets/cover1.jpg";
 import Banner3 from "../../assets/cover2.jpg";
-import { Chip } from "@mui/material";
 import { useState } from "react";
-import { hover } from "@testing-library/user-event/dist/hover";
 
 export default function HeroSection() {
   const [products] = useState([
@@ -69,56 +60,7 @@ export default function HeroSection() {
   const handlePrev = () => {
     setCurrentIndex((currentIndex - 1 + products.length) % products.length);
   };
-  const CustomCard = ({ rating, image, title, price, onClick }) => {
-    const [value, setValue] = useState(rating);
 
-    return (
-      <Button onClick={onClick}>
-        <Paper
-          sx={{
-            display: "flex",
-            m: 0,
-            p: 0,
-            width: 300,
-            justifyContent: "space-around",
-            alignItems: "center",
-            height: "100px",
-            cursor: "pointer",
-          }}
-        >
-          <Box>
-            <img src={image} style={{ height: "70px" }} alt={title} />
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <Typography
-              variant="h6"
-              sx={{ textAlign: "left", fontWeight: 700 }}
-            >
-              {title}
-            </Typography>
-            <Rating name="read-only" value={value} readOnly precision={0.5} />
-            <Stack direction="row" spacing={2}>
-              <Typography sx={{ fontWeight: 800, color: "blue" }}>
-                RS. {price}
-              </Typography>
-              <Chip
-                size="small"
-                label="New"
-                color="success"
-                variant="contained"
-              />
-            </Stack>
-          </Box>
-        </Paper>
-      </Button>
-    );
-  };
 
 
   const CustomCarousel = () => {
@@ -170,7 +112,7 @@ export default function HeroSection() {
               {products.length > 0 && (
                 <React.Fragment>
                   <Button onClick={handlePrev}>&lt;</Button>
-                  <CustomCard
+                  <CustomProductCard
                     rating={products[currentIndex].rating}
                     image={products[currentIndex].image}
                     title={products[currentIndex].name}
