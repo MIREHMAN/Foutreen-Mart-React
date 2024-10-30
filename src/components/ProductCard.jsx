@@ -14,12 +14,14 @@ const ProductCard = ({ title, price, rating, image }) => {
   return (
     <Card sx={{ width: "100%", height: "100%", cursor: "pointer", py: 2 }}>
       <CardMedia
-      
-        sx={{ height: { xs: 150, md: 250 }, width: '100%' }}
+        sx={{ height: { xs: 150, md: 250 }, width: "100%" }}
         image={image}
         title={title}
       />
-      <CardContent sx={{display:{xs:'none' , md:'block'}}}>
+
+      {/* Card Contents for desktop View */}
+
+      <CardContent sx={{ display: { xs: "none", md: "block" } }}>
         <Stack direction="row" spacing={1}>
           <Typography variant="h6" sx={{ fontWeight: 800, color: "blue" }}>
             {title}
@@ -34,42 +36,61 @@ const ProductCard = ({ title, price, rating, image }) => {
           <Rating name="read-only" value={rating} readOnly precision={0.5} />
         </Stack>
       </CardContent>
-      
-      <CardContent sx={{display:{xs:'block' , md:'none'}}}>
+
+      {/* Card Contents for Mobile View */}
+
+      <CardContent sx={{ display: { xs: "block", md: "none" } }}>
         <Stack direction="row" spacing={1}>
-          <Typography variant="h6" sx={{ fontWeight: 600, color: "blue" , fontSize:'medium'}}>
+          <Typography
+            variant="h6"
+            sx={{ fontWeight: 600, color: "blue", fontSize: "medium" }}
+          >
             {title}
           </Typography>
-          
         </Stack>
 
-        <Stack  spacing={0.5}>
-          <Stack direction='row' spacing={5}><Typography sx={{ fontWeight: 600, color: "secondary", fontSize:'small' }}>
-            RS. {price}
-          </Typography>
-          <Chip size="small" label="New" color="success" variant="contained" sx={{fontSize:'0.6rem', borderRadius:'8px', }}/>
-          </Stack>     
+        <Stack spacing={0.5}>
+          <Stack direction="row" spacing={5}>
+            <Typography
+              sx={{ fontWeight: 600, color: "secondary", fontSize: "small" }}
+            >
+              RS. {price}
+            </Typography>
+            <Chip
+              size="small"
+              label="New"
+              color="success"
+              variant="contained"
+              sx={{ fontSize: "0.6rem", borderRadius: "8px" }}
+            />
+          </Stack>
           <Rating name="read-only" value={rating} readOnly precision={0.5} />
         </Stack>
       </CardContent>
-      <CardActions sx={{display:{xs:'block' , md:'none'}}}>
+
+      {/* Card Actions for Mobile View */}
+
+      <CardActions sx={{ display: { xs: "block", md: "none" } }}>
         <Stack spacing={1}>
           <Button variant="contained" color="success" size="small">
             Buy Now
           </Button>
-          <Stack direction='row' spacing={2}>
-          <Button variant="contained" color="secondary" size="small">
-            Add to Cart
-          </Button>
-          <Button variant="contained" color="secondary" size="small">
-            <FavoriteIcon />
-          </Button>
+          <Stack direction="row" spacing={2}>
+            <Button variant="contained" color="secondary" size="small">
+              Add to Cart
+            </Button>
+            <Button variant="contained" color="secondary" size="small">
+              <FavoriteIcon />
+            </Button>
           </Stack>
-         
         </Stack>
       </CardActions>
 
-      <CardActions sx={{display:{xs:'none' , md:'block'}}}>
+      
+      {/* Card Actionss for desktop View */}
+      
+      
+      <CardActions sx={{ display: { xs: "none", md: "block" } }}>
         <Stack direction="row" spacing={2}>
           <Button variant="contained" color="success" size="medium">
             Buy Now
