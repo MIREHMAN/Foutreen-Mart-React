@@ -67,7 +67,7 @@ const CategoriesSection = () => {
       ]);
 
     return (
-        <Grid container sx={{ m: 3 }}>
+        <Grid container sx={{ m: {xs:1, md:3} }}>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <Grid item xs={12}>
           <Box sx={{ display: "flex" }}>
