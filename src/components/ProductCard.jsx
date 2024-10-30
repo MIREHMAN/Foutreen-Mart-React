@@ -10,10 +10,10 @@ import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-const ProducatCard = ({title,price,rating,image}) => {
+const ProductCard = ({title,price,rating,image}) => {
     
   return (
-    <Card sx={{ maxWidth: 345 , cursor:'pointer' , py:2}} >
+    <Card sx={{ width: '100%' , cursor:'pointer' , py:2}} >
     <CardMedia
       sx={{ height: 250 }}
       image={image}
@@ -55,4 +55,4 @@ const ProducatCard = ({title,price,rating,image}) => {
   )
 }
 
-export default ProducatCard
+export default ProductCard
