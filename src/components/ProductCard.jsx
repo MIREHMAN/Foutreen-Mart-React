@@ -13,7 +13,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 const ProductCard = ({title,price,rating,image}) => {
     
   return (
-    <Card sx={{ width: '100%' , cursor:'pointer' , py:2}} >
+    <Card sx={{ width: '100%' , height:420, cursor:'pointer' , py:2}} >
     <CardMedia
       sx={{ height: 250 }}
       image={image}

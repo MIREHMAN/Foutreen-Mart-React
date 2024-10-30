@@ -46,56 +46,32 @@ function FlashSalesSection() {
 
   return (
     <Grid container sx={{ m: 3 }}>
-      <Box sx={{display:'flex', flexDirection:'column'}}>
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
+        <Grid item xs={12}>
+          <Box sx={{ display: "flex" }}>
+            <Typography variant="h5">Flash Sales</Typography>
+            <Typography variant="caption">00:00:00</Typography>
+          </Box>
+        </Grid>
 
-      
-      <Grid item xs={12}>
-        <Box sx={{display:'flex'}}>
-        <Typography variant="h5">Flash Sales</Typography>
-        <Typography variant="caption">00:00:00</Typography>
-        </Box>
-       
-      </Grid>
-
-      <Grid container spacing={2}>
-        <Grid item xs={6} md={3}>
-          <ProductCard
-            title={flashProducts[0].name}
-            rating={flashProducts[0].rating}
-            price={flashProducts[0].price}
-            image={flashProducts[0].image}
-          />
-        
+        <Grid container spacing={2}>
+          {flashProducts.map((product, index) => (
+            <Grid
+              key={product.id}
+              item
+              xs={6}
+              md={3}
+             
+            >
+              <ProductCard
+                title={product.name}
+                rating={product.rating}
+                price={product.price}
+                image={product.image}
+              />
+            </Grid>
+          ))}
         </Grid>
-        <Grid item xs={6} md={3}>
-          <ProductCard
-            title={flashProducts[0].name}
-            rating={flashProducts[0].rating}
-            price={flashProducts[0].price}
-            image={flashProducts[0].image}
-          />
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <ProductCard
-            title={flashProducts[0].name}
-            rating={flashProducts[0].rating}
-            price={flashProducts[0].price}
-            image={flashProducts[0].image}
-          />
-          
-        
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <ProductCard
-            title={flashProducts[0].name}
-            rating={flashProducts[0].rating}
-            price={flashProducts[0].price}
-            image={flashProducts[0].image}
-          />
-          
-        
-        </Grid>
-      </Grid>
       </Box>
     </Grid>
   );
