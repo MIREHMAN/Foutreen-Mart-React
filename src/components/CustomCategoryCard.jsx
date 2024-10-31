@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Rating from "@mui/material/Rating";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
-import Stack from "@mui/material/Stack";
 
 export default function CustomProductCard ({ rating, image, title, price, onClick })  {
     const [value, setValue] = useState(rating);
@@ -17,9 +15,10 @@ export default function CustomProductCard ({ rating, image, title, price, onClic
             m: 0,
             p: 0,
             width: {xs:250,md:300},
+            flexDirection:'column',
             justifyContent: "space-around",
             alignItems: "center",
-            height: {xs:'80px',md:'90px'},
+            height: 140,
             cursor: "pointer",
           }}
         >
@@ -39,13 +38,8 @@ export default function CustomProductCard ({ rating, image, title, price, onClic
             >
               {title}
             </Typography>
-            <Rating name="read-only" value={value} readOnly precision={0.5} sx={{fontSize:'medium', letterSpacing:2}} />
-            <Stack direction="row" spacing={2}>
-              <Typography sx={{ fontWeight: {xs: 500, md:800}, color: "blue" }}>
-                RS. {price}
-              </Typography>
-              
-            </Stack>
+            
+           
           </Box>
         </Paper>
       </Button>

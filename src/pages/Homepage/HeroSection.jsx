@@ -2,7 +2,6 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid2";
-import Button from "@mui/material/Button";
 import CustomProductCard from "../../components/CustomProductCard";
 import CustomCarousel from "../../components/CustomCarousel";
 import SlidingCarousel from "../../components/SlidingCarousel";
