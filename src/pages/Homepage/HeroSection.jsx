@@ -67,7 +67,7 @@ export default function HeroSection() {
   const productCarouselItems = products.map(createProductCard);
 
   return (
-    <Container fluid className="hero-section">
+    <Container fluid>
       <Grid container spacing={2}>
         <Box
           sx={{
