@@ -1,20 +1,20 @@
 
+import { Box } from "@mui/material";
 import { Carousel } from "react-bootstrap";
 
 function CustomCarousel({ items }) {
   return (
-    <Carousel className="hero-carousel h-100">
+    <Carousel indicators={false}  translate="yes">
       {items.map((item, index) => (
         <Carousel.Item key={index}>
          
-            <img 
-              src={item} 
-              alt="" 
-              style={{ objectFit: "cover", width: "100%" }} 
-            />
+            <Box>
+                {item.component}
+            </Box>
           
         </Carousel.Item>
       ))}
+      
     </Carousel>
   );
 }
