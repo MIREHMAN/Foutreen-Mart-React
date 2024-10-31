@@ -6,13 +6,13 @@ import TopCategoriesCard from '../../components/TopCategoriesCard';
 function PromotionalSection() {
 
   return (
-<Box sx={{m:5}}>
+<Box sx={{m:3}}>
 <Grid container spacing={3}>
   
-  <Grid items xs={12} md={6}><TopCategoriesCard /></Grid>
-  <Grid items xs={12} md={6}><TopCategoriesCard/></Grid>
-  <Grid items xs={12} md={6}><TopCategoriesCard/></Grid>
-  <Grid items xs={12} md={6}><TopCategoriesCard/></Grid>
+  <Grid items xs={12} md={6}><TopCategoriesCard   backgroundColor = 'blue' /></Grid>
+  <Grid items xs={12} md={6}><TopCategoriesCard backgroundColor = 'tomato'/ ></Grid>
+  <Grid items xs={12} md={6}><TopCategoriesCard backgroundColor = 'gray'/></Grid>
+  <Grid items xs={12} md={6}><TopCategoriesCard backgroundColor = 'orange'/></Grid>
   
 
 </Grid>
