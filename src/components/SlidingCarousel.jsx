@@ -4,7 +4,7 @@ import { Carousel } from "react-bootstrap";
 
 function CustomCarousel({ items }) {
   return (
-    <Carousel indicators={false}  translate="yes">
+    <Carousel indicators={false} interval={null} translate="yes">
       {items.map((item, index) => (
         <Carousel.Item key={index}>
          
