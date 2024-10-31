@@ -5,6 +5,7 @@ import FlashSalesSection from '../Homepage/FlashSalesSection';
 import CategoriesSection from '../Homepage/CategoriesSection';
 import ForYouSection from '../Homepage/ForYouSection';
 import PromotionalSection from './PromotionalSection';
+import CustomCarousel from '../../components/CustomCarousel';
 
 
 

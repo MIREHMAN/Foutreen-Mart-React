@@ -4,23 +4,22 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid2";
 import Button from "@mui/material/Button";
 import CustomProductCard from "../../components/CustomProductCard";
+import CustomCarousel from "../../components/CustomCarousel";
 import {
   Container,
   Carousel,
 } from "react-bootstrap";
-import Banner1 from "../../assets/cover.jpg";
-import Banner2 from "../../assets/cover1.jpg";
-import Banner3 from "../../assets/cover2.jpg";
+
 import { useState } from "react";
 
 export default function HeroSection() {
   const [products] = useState([
     {
       id: 1,
-      name: "IPhone 16",
+      name: "Canon Camera",
       image: "https://picsum.photos/200",
-      price: 500,
-      rating: 3,
+      price: 25000,
+      rating: 4,
     },
     {
       id: 2,
@@ -33,8 +32,8 @@ export default function HeroSection() {
       id: 3,
       name: "IPhone 16",
       image: "https://picsum.photos/200",
-      price: 500,
-      rating: 3,
+      price: 100500,
+      rating: 4.5,
     },
     {
       id: 4,
@@ -63,33 +62,7 @@ export default function HeroSection() {
 
 
 
-  const CustomCarousel = () => {
-    return (
-      <Carousel className="hero-carousel h-100">
-        <Carousel.Item>
-          <img
-            src={Banner1}
-            alt=""
-            style={{ objectFit: "cover", width: "100%" }}
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src={Banner2}
-            alt=""
-            style={{ objectFit: "cover", width: "100%" }}
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src={Banner3}
-            alt=""
-            style={{ objectFit: "cover", width: "100%" }}
-          />
-        </Carousel.Item>
-      </Carousel>
-    );
-  };
+  
   return (
     <Container fluid className="hero-section">
       <Grid container spacing={2}>
@@ -104,14 +77,14 @@ export default function HeroSection() {
           <Grid item xs={12} md={12}>
             <CustomCarousel />
           </Grid>
-          <Typography variant="h4" sx={{ textAlign: "center", mt: 2 }}>
+          <Typography variant="h5" sx={{ textAlign: "center", mt: 2 }}>
             Latest Updates
           </Typography>
           <Grid item xs={12} md={12}>
             <Grid container spacing={2}>
               {products.length > 0 && (
                 <React.Fragment>
-                  <Button onClick={handlePrev}>&lt;</Button>
+                  <Button size="small" sx={{width:'10px'}} onClick={handlePrev}>&lt;</Button>
                   <CustomProductCard
                     rating={products[currentIndex].rating}
                     image={products[currentIndex].image}

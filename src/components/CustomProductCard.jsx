@@ -17,10 +17,10 @@ export default function CustomProductCard ({ rating, image, title, price, onClic
             display: "flex",
             m: 0,
             p: 0,
-            width: 300,
+            width: {xs:250,md:300},
             justifyContent: "space-around",
             alignItems: "center",
-            height: "100px",
+            height: {xs:'80px',md:'90px'},
             cursor: "pointer",
           }}
         >
@@ -36,21 +36,16 @@ export default function CustomProductCard ({ rating, image, title, price, onClic
           >
             <Typography
               variant="h6"
-              sx={{ textAlign: "left", fontWeight: 700 }}
+              sx={{ textAlign: "left", fontWeight: {xs: 600, md:700}, fontSize:'small', letterSpacing:2}}
             >
               {title}
             </Typography>
-            <Rating name="read-only" value={value} readOnly precision={0.5} />
+            <Rating name="read-only" value={value} readOnly precision={0.5} sx={{fontSize:'medium', letterSpacing:2}} />
             <Stack direction="row" spacing={2}>
-              <Typography sx={{ fontWeight: 800, color: "blue" }}>
+              <Typography sx={{ fontWeight: {xs: 500, md:800}, color: "blue" }}>
                 RS. {price}
               </Typography>
-              <Chip
-                size="small"
-                label="New"
-                color="success"
-                variant="contained"
-              />
+              
             </Stack>
           </Box>
         </Paper>
