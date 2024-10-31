@@ -3,9 +3,10 @@ import {
     
     Carousel,
   } from "react-bootstrap";
-  import Banner1 from "../../assets/cover.jpg";
-  import Banner2 from "../../assets/cover1.jpg";
-  import Banner3 from "../../assets/cover2.jpg";
+  import Banner1 from "../assets/cover.jpg";
+  import Banner2 from "../assets/cover1.jpg";
+  import Banner3 from "../assets/cover2.jpg";
+ 
   
 function CustomCarousel () {
     return (
@@ -33,6 +34,6 @@ function CustomCarousel () {
         </Carousel.Item>
       </Carousel>
     );
-  };
+  }
 
   export default CustomCarousel;

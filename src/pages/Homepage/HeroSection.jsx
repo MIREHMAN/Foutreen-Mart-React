@@ -4,7 +4,6 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid2";
 import Button from "@mui/material/Button";
 import CustomProductCard from "../../components/CustomProductCard";
-import CustomCarousel from "../../components/CustomCarousel";
 import {
   Container,
   Carousel,
@@ -75,7 +74,7 @@ export default function HeroSection() {
           }}
         >
           <Grid item xs={12} md={12}>
-            <CustomCarousel />
+            
           </Grid>
           <Typography variant="h5" sx={{ textAlign: "center", mt: 2 }}>
             Latest Updates
