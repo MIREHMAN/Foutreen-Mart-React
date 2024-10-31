@@ -6,8 +6,8 @@ import TopCategoriesCard from '../../components/TopCategoriesCard';
 function PromotionalSection() {
 
   return (
-<Box sx={{m:3}}>
-<Grid container spacing={3}>
+<Box sx={{m:{xs:1,md:3}}}>
+<Grid container spacing={2}>
   
   <Grid items xs={12} md={6}><TopCategoriesCard   backgroundColor = 'blue' /></Grid>
   <Grid items xs={12} md={6}><TopCategoriesCard backgroundColor = 'tomato'/ ></Grid>

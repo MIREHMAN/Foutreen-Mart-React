@@ -10,7 +10,7 @@ const TopCategoriesCard = (backgroundColor='red') => {
         display: 'flex',
         width: '100%',
         backgroundColor,
-        borderRadius: 6,
+        borderRadius: 2,
         overflow: 'hidden', 
       }}
     >
