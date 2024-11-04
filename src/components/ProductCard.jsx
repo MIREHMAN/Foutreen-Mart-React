@@ -9,6 +9,8 @@ import Rating from "@mui/material/Rating";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { Checkbox } from "@mui/material";
+import { Favorite, FavoriteBorder } from "@mui/icons-material";
 
 const ProductCard = ({ title, price, rating, image }) => {
   return (
@@ -74,9 +76,9 @@ const ProductCard = ({ title, price, rating, image }) => {
             <Button variant="contained" color="secondary" size="small" sx={{fontSize:'0.5rem'}}>
               Add to Cart
             </Button>
-            <Button variant="contained" color="secondary" size="small" sx={{fontSize:'0.5rem'}}>
-              <FavoriteIcon  sx={{fontSize:'0.8rem'}}/>
-            </Button>
+           
+            <Checkbox size="small" sx={{fontSize:'0.3rem'}} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+            
           </Stack>
         </Stack>
       </CardActions>
@@ -93,9 +95,8 @@ const ProductCard = ({ title, price, rating, image }) => {
           <Button variant="contained" color="secondary" size="medium">
             Add to Cart
           </Button>
-          <Button variant="contained" color="secondary" size="medium">
-            <FavoriteIcon />
-          </Button>
+          <Checkbox size="medium" sx={{fontSize:'0.5rem'}} icon={<FavoriteBorder />} checkedIcon={<Favorite color="warning" />} />
+            
         </Stack>
       </CardActions>
     </Card>
