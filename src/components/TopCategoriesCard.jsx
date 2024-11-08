@@ -1,36 +1,66 @@
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 import cameraImage from '../assets/camera.png';
+import { Box, Typography } from '@mui/material';
 
-const TopCategoriesCard = (backgroundColor='red') => {
+const TopCategoriesCardRoot = styled(Box)(({ theme, backgroundColor }) => ({
+  display: 'flex',
+  width: '100%',
+  backgroundColor,
+  borderRadius: 2,
+  overflow: 'hidden',
+}));
+
+const Content = styled(Box)(({ theme }) => ({
+  margin: theme.spacing(2),
+  padding: theme.spacing(2),
+  flex: 1,
+}));
+
+const Heading = styled(Typography)(({ theme }) => ({
+  fontSize: { xs: '1rem', md: '1.5rem' },
+  fontWeight: '800',
+  color: 'whitesmoke',
+}));
+
+const Description = styled(Typography)(({ theme }) => ({
+  fontSize: { xs: '0.7rem', md: '1.2rem' },
+  fontWeight: { xs: '400', md: '500' },
+  color: 'whitesmoke',
+  lineHeight: { xs: '16px', md: '24px' },
+}));
+
+const ImageContainer = styled(Box)(({ theme }) => ({
+  margin: 'auto',
+  marginRight: theme.spacing(2),
+  
+}));
+
+const TopCategoriesCard = ({ backgroundColor = 'red' }) => {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        width: '100%',
-        backgroundColor,
-        borderRadius: 2,
-        overflow: 'hidden', 
-      }}
-    >
-      <Box sx={{ m: {md:2}, p:2,flex: 1 }}>
-        <Stack spacing={1}> 
-          <Typography variant="h6" sx={{ fontSize: {xs:'1rem', md:'1.5rem'}, fontWeight: '800', color: 'whitesmoke' }}>
-            This is a Heading
-          </Typography>
-          <Typography sx={{ fontSize: {xs:'0.7rem', md:'1.5rem'}, fontWeight: {xs:'400', md:'500'}, color: 'whitesmoke', lineHeight: {xs:'16px'}}}>
-            This is a Paragraph or Description that also includes Promotion
-          </Typography>
+    <TopCategoriesCardRoot backgroundColor={backgroundColor}>
+      <Content>
+        <Stack spacing={1}>
+          <Heading>Short Heading</Heading>
+          <Description>
+            Short Promotional Paragraph
+          </Description>
         </Stack>
-        <Button size='small' variant="contained" color="success" sx={{ mt: {md:2, xs:1, fontSize:'0.6rem'} }}> 
+        <Button
+          size="small"
+          variant="contained"
+          color="success"
+          sx={{ mt: { md: 2, xs: 1 }, fontSize: '0.6rem' }}
+        >
           Shop Now
         </Button>
-      </Box>
-      <Box sx={{ margin: 'auto', marginRight: 2 }}>
-        <img src={cameraImage} height={100} alt="Camera Image" /> 
-      </Box>
-    </Box>
+      </Content>
+      <ImageContainer>
+        <img src={cameraImage} alt="Camera Image" width='100'/>
+      </ImageContainer>
+    </TopCategoriesCardRoot>
   );
 };
 

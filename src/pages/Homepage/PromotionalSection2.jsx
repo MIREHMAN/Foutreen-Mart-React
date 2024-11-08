@@ -1,22 +1,17 @@
-import Grid from '@mui/material/Grid2';
-import Box from '@mui/material/Box';
-
+import Stack from '@mui/material/Stack';
 import TopCategoriesCard from '../../components/TopCategoriesCard';
 
 function PromotionalSection2() {
-
   return (
-<Box sx={{m:{xs:1,md:3}}}>
-<Grid container spacing={2}>
-  
-  
-  <Grid items xs={12} md={6}><TopCategoriesCard backgroundColor = 'gray'/></Grid>
-  <Grid items xs={12} md={6}><TopCategoriesCard backgroundColor = 'orange'/></Grid>
-  
+    <Stack
+      direction={{ xs: 'column', md: 'row' }}
+      spacing={{ xs: 1, md: 2 }}
+      sx={{ m: { xs: 1, md: 3 } }}
+    >
+      <TopCategoriesCard backgroundColor="blue" />
+      <TopCategoriesCard backgroundColor="tomato" />
+    </Stack>
+  );
+}
 
-</Grid>
-</Box>
-  
-    )
-};
 export default PromotionalSection2;
