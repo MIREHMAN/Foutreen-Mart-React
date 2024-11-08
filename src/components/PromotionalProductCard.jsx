@@ -14,12 +14,11 @@ const PromotionalProductCard = ({ title, price,  image }) => {
           width: { xs: '100%', md: '100%' },
           height: '100%',
           cursor: 'pointer',
-          py: { xs: 0, md: 0 },
           border: 'none',
         }}
       >
         <CardMedia
-          sx={{ height: { xs: 100, md: 200 }, width: '100%', objectFit: 'contain' }}
+          sx={{ height: { xs: 120, md: 200 }, width: '100%', objectFit: 'contain' }}
           image={image}
           title={title}
         />
