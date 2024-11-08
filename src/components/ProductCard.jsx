@@ -8,7 +8,6 @@ import Typography from "@mui/material/Typography";
 import Rating from "@mui/material/Rating";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Checkbox } from "@mui/material";
 import { Favorite, FavoriteBorder } from "@mui/icons-material";
 

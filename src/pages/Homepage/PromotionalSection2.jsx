@@ -3,15 +3,15 @@ import Box from '@mui/material/Box';
 
 import TopCategoriesCard from '../../components/TopCategoriesCard';
 
-function PromotionalSection() {
+function PromotionalSection2() {
 
   return (
 <Box sx={{m:{xs:1,md:3}}}>
 <Grid container spacing={2}>
   
-  <Grid items xs={12} md={6}><TopCategoriesCard   backgroundColor = 'blue' /></Grid>
-  <Grid items xs={12} md={6}><TopCategoriesCard backgroundColor = 'tomato'/ ></Grid>
   
+  <Grid items xs={12} md={6}><TopCategoriesCard backgroundColor = 'gray'/></Grid>
+  <Grid items xs={12} md={6}><TopCategoriesCard backgroundColor = 'orange'/></Grid>
   
 
 </Grid>
@@ -19,4 +19,4 @@ function PromotionalSection() {
   
     )
 };
-export default PromotionalSection;
+export default PromotionalSection2;

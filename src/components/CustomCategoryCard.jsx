@@ -14,7 +14,7 @@ export default function CustomProductCard ({ rating, image, title, price, onClic
             display: "flex",
             m: 0,
             p: 0,
-            width: {xs:250,md:300},
+            width: {xs:150,md:300},
             flexDirection:'column',
             justifyContent: "space-around",
             alignItems: "center",

@@ -6,6 +6,8 @@ import cameraImage from '../../assets/camera.png';
 import Typography from "@mui/material/Typography";
 import SlidingCarousel from '../../components/SlidingCarousel'
 import CustomCategoryCard from "../../components/CustomCategoryCard";
+import { Stack } from 'react-bootstrap';
+import Marquee from 'react-fast-marquee';
 
 
 const CategoriesSection = () => {
@@ -33,35 +35,24 @@ const CategoriesSection = () => {
         { name: 'Toys', icon: cameraImage }, 
         { name: 'Travel', icon: cameraImage}, 
     ];
-    const createCategoryCard = (categories, index) => ({
-      key: index,
-      component: (
-        <CustomCategoryCard
-          
-          image={categories.icon}
-          title={categories.name}
-          
-        />
-      ),
-    });
     
-    const categoryCarouselItems = categories.map(createCategoryCard);
    
 
     return (
-        <Grid container sx={{ m: {xs:1, md:3} }}>
-      <Box sx={{ display: "flex", flexDirection: "column" }}>
-        <Grid item xs={12}>
-          <Box sx={{ display: "flex" }}>
-            <Typography variant="h4">Categories</Typography>
-          </Box>
-          <Grid item xs={12} md={12}>
-          <SlidingCarousel items={categoryCarouselItems} />
-          </Grid>
-        </Grid>
-        
-      </Box>
-      </Grid>
+      <Stack direction="column" spacing={2} sx={{ m: { xs: 1, md: 3 } }}>
+      <Typography variant="h4">Categories</Typography>
+      <Marquee pauseOnHover={true} gradient={true} gradientWidth={30} speed={30}>
+        {categories && categories.map((category) => (
+          <Stack key={category.id} direction="row" spacing={1}>
+            <CustomCategoryCard
+              image={category.icon}
+              title={category.name}
+              
+            />
+          </Stack>
+        ))}
+      </Marquee>
+    </Stack>
     );
 };
 

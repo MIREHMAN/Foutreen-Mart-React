@@ -1,10 +1,7 @@
 import React from "react";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid2";
 import CustomProductCard from "../../components/CustomProductCard";
 import CustomCarousel from "../../components/CustomCarousel";
-import SlidingCarousel from "../../components/SlidingCarousel";
 import { Container, Carousel, Stack } from "react-bootstrap";
 import Banner1 from "../../assets/cover.jpg";
 import Banner2 from "../../assets/cover1.jpg";
