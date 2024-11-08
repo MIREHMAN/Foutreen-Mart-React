@@ -9,6 +9,7 @@ import { Container, Carousel, Stack } from "react-bootstrap";
 import Banner1 from "../../assets/cover.jpg";
 import Banner2 from "../../assets/cover1.jpg";
 import Banner3 from "../../assets/cover2.jpg";
+import Marquee from "react-fast-marquee";
 
 export default function HeroSection() {
   const images = [Banner1, Banner2, Banner3];
@@ -57,6 +58,8 @@ export default function HeroSection() {
     <Typography variant="h5" textAlign="center" mb={2}>
       Latest Updates
     </Typography>
+
+    <Marquee pauseOnHover={true} gradient={true} gradientWidth={30} speed={30}>
     {products && products.map((product) => (
       <Stack key={product.id} direction="row" spacing={1}>
         <CustomProductCard
@@ -67,6 +70,7 @@ export default function HeroSection() {
         />
       </Stack>
     ))}
+     </Marquee>
   </Stack>
 </Container>
   );
