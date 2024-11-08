@@ -5,11 +5,10 @@ import Grid from "@mui/material/Grid2";
 import CustomProductCard from "../../components/CustomProductCard";
 import CustomCarousel from "../../components/CustomCarousel";
 import SlidingCarousel from "../../components/SlidingCarousel";
-import { Container, Carousel } from "react-bootstrap";
+import { Container, Carousel, Stack } from "react-bootstrap";
 import Banner1 from "../../assets/cover.jpg";
 import Banner2 from "../../assets/cover1.jpg";
 import Banner3 from "../../assets/cover2.jpg";
-
 
 export default function HeroSection() {
   const images = [Banner1, Banner2, Banner3];
@@ -49,45 +48,26 @@ export default function HeroSection() {
       price: 500,
       rating: 3,
     },
-  ]
-
-  const createProductCard = (product, index) => ({
-    key: index,
-    component: (
-      <CustomProductCard
-        rating={product.rating}
-        image={product.image}
-        title={product.name}
-        price={product.price}
-      />
-    ),
-  });
-  
-  const productCarouselItems = products.map(createProductCard);
+  ];
 
   return (
     <Container fluid>
-      <Grid container spacing={2}>
-        <Box
-          sx={{
-            flexGrow: 1,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
-          <Grid item xs={12} md={12}>
-          <CustomCarousel items={images} />
-          </Grid>
-          <Typography variant="h5" sx={{ textAlign: "center", mt: 2 }}>
-            Latest Updates
-          </Typography>
-          <Grid item xs={12} md={12}>
-          <SlidingCarousel items={productCarouselItems} />
-           
-          </Grid>
-        </Box>
-      </Grid>
-    </Container>
+  <Stack direction="column" spacing={2}>
+    <CustomCarousel items={images} />
+    <Typography variant="h5" textAlign="center" mb={2}>
+      Latest Updates
+    </Typography>
+    {products && products.map((product) => (
+      <Stack key={product.id} direction="row" spacing={1}>
+        <CustomProductCard
+          rating={product.rating}
+          image={product.image}
+          title={product.name}
+          price={product.price}
+        />
+      </Stack>
+    ))}
+  </Stack>
+</Container>
   );
 }
