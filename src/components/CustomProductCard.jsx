@@ -16,7 +16,7 @@ export default function CustomProductCard ({ rating, image, title, price, onClic
             display: "flex",
             m: 0,
             p: 0,
-            width: {xs:250,md:300},
+            width: {xs:200,md:300},
             justifyContent: "space-around",
             alignItems: "center",
             height: {xs:'80px',md:'90px'},
@@ -24,7 +24,7 @@ export default function CustomProductCard ({ rating, image, title, price, onClic
           }}
         >
           <Box>
-            <img src={image} style={{ height: "70px" }} alt={title} />
+            <img src={image} style={{ height: "50px" }} alt={title} />
           </Box>
           <Box
             sx={{
@@ -35,13 +35,13 @@ export default function CustomProductCard ({ rating, image, title, price, onClic
           >
             <Typography
               variant="h6"
-              sx={{ textAlign: "left", fontWeight: {xs: 600, md:700}, fontSize:'small', letterSpacing:2}}
+              sx={{ textAlign: "left", fontWeight: {xs: 600, md:700}, fontSize:'0.7rem', letterSpacing:1}}
             >
               {title}
             </Typography>
-            <Rating name="read-only" value={value} readOnly precision={0.5} sx={{fontSize:'medium', letterSpacing:2}} />
+            <Rating name="read-only" value={value} readOnly precision={0.5} sx={{fontSize:'small', letterSpacing:2}} />
             <Stack direction="row" spacing={2}>
-              <Typography sx={{ fontWeight: {xs: 500, md:800}, color: "blue" }}>
+              <Typography sx={{ fontWeight: {xs: 700, md:800}, color: "blue",fontSize:'0.7rem' }}>
                 RS. {price}
               </Typography>
               
