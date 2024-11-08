@@ -6,6 +6,7 @@ import CategoriesSection from '../Homepage/CategoriesSection';
 import ForYouSection from '../Homepage/ForYouSection';
 import PromotionalSection from './PromotionalSection';
 import PromotionalSection2 from './PromotionalSection2';
+import PromotionalProductsSection from './PromotionalProductsSection';
 
 
 
@@ -19,6 +20,7 @@ function Homepage() {
       <FlashSalesSection/>
       <CategoriesSection/>
       <PromotionalSection2/>
+      <PromotionalProductsSection/>
       <ForYouSection/>
     </div>
   );
