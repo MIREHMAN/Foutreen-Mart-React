@@ -8,7 +8,6 @@ Fourteen Mart is a multistore e-commerce platform built with Next.js, providing 
 * Secure payments: Integrated payment gateways for hassle-free checkout.
 * Real-time updates: Get instant updates on product availability and prices.
 ## Installation
-* Clone the repository: git clone https://github.com/your-username/fourteen-mart.git
 * Install dependencies: npm install or yarn install
 * Start development server: npm run dev or yarn dev
 * Build and Deployment
